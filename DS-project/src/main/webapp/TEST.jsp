@@ -200,18 +200,18 @@ a:hover{
 
 <script type="text/javascript">
 	
-   function changeColor(){
+   /*function changeColor(){
   	btn1=document.getElementById("apple");
   	btn2=document.getElementById("cosmetic");
   	
-  	/*if(!btn1.classList.add(css)){
+  	if(!btn1.classList.add(css)){
   		btn1.classList.add(css)
    		btn2.classList.remove(css)
   	
   	else{
    		btn2.classList.add(css)
    		btn1.classList.remove(css)
-  	}*/
+  	}
   		if (e.target === btn1) { 
         button1.style.backgroundColor = 'black'; 
         button2.style.backgroundColor = 'gray'; 
@@ -226,7 +226,7 @@ a:hover{
 
       button1.addEventListener('click', changeColour, false); 
       button2.addEventListener('click', changeColour, false); 
- }
+ }*/
    
  function preventDefault(){
 	 //event.stopPropagation();
