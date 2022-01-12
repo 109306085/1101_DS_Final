@@ -248,11 +248,14 @@ a:hover{
 	function preventDefault2(){
 	 //event.stopPropagation();
 	 //event.preventDefault();
-	 document.getElementById("hide").style.visibility="visible";
 	 var1 = document.all.data.value; //獲取頁面form中的變數值   
 	 var1 = var1+"apple";   
-	 
-	 //document.insertForm.submit; 
+	 //document.insertForm.submit;
+	}
+	/*function loading(){
+		if(preventDefault()==true && preventDefault2()==true){
+			document.getElementById("loading").style.;
+		}*/
 	}
 
 </script>
@@ -322,10 +325,12 @@ a:hover{
                                          <a href='<%=console.get(i).webPage.url%>'> <%=console.get(i).webPage.name%> </a>
                                           
                               <%                        
+                                        } 
+                                        
                                         }
-                                        }
-               
+                                        
                     %> 
+                    
                     
               <div><img class="cat" src="images/cat.gif"/></div>
                     

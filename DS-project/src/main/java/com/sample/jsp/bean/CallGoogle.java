@@ -72,11 +72,13 @@ public class CallGoogle {
  }
  
  public void constructor() {
-  this.url = "http://www.google.com/search?q="+keyword+"&oe=utf8&num=30";
-  System.out.println(url);
-  this.URList = new ArrayList<WebPage>();
-  tree = new WebTree(new WebPage(url,"root"));
- }
+	  this.url = "http://www.google.com/search?q=apple"+keyword+"&oe=utf8&num=50";
+	  if(getKeylist().getSelectlist().get(0).name.equals("M.A.C")) {
+	   this.url = "http://www.google.com/search?q=M.A.C"+keyword+"&oe=utf8&num=50"; 
+	  }
+	  this.URList = new ArrayList<WebPage>();
+	  tree = new WebTree(new WebPage(url,"root"));
+	 }
  
 
  private String fetchContent() throws IOException
