@@ -8,6 +8,7 @@ public class Keyword {
   private ArrayList<Keyword> applelist = new ArrayList<Keyword>();
   private ArrayList<Keyword> cosmeticlist = new ArrayList<Keyword>();
   private ArrayList<Keyword> selectlist = applelist;
+  
   public Keyword(String name,int score){
    this.name = name;
    this.score = score;
@@ -50,16 +51,16 @@ public class Keyword {
   applelist.add(new Keyword("iPad", 5));
   applelist.add(new Keyword("BTS", 4));
   applelist.add(new Keyword("secondhand", 2));
-  cosmeticlist.add(new Keyword("M.A.C", -3));
-  cosmeticlist.add(new Keyword("Cosmetic", -3));
-  cosmeticlist.add(new Keyword("cosmetic" ,-5));
-  cosmeticlist.add(new Keyword("foundation", -5));
-  cosmeticlist.add(new Keyword("lipstick", -5));
-  cosmeticlist.add(new Keyword("makeup", -5));
-  cosmeticlist.add(new Keyword("lipstick", -5));
-  cosmeticlist.add(new Keyword("counter", -2));
-  cosmeticlist.add(new Keyword("bullet", -4));
-  cosmeticlist.add(new Keyword("endorse", -3));
+  applelist.add(new Keyword("M.A.C", -3));
+  applelist.add(new Keyword("Cosmetic", -3));
+  applelist.add(new Keyword("cosmetic" ,-5));
+  applelist.add(new Keyword("foundation", -5));
+  applelist.add(new Keyword("lipstick", -5));
+  applelist.add(new Keyword("makeup", -5));
+  applelist.add(new Keyword("lipstick", -5));
+  applelist.add(new Keyword("counter", -2));
+  applelist.add(new Keyword("bullet", -4));
+  applelist.add(new Keyword("endorse", -3));
   
   
  }
@@ -77,17 +78,17 @@ public class Keyword {
    cosmeticlist.add(new Keyword("專櫃", 2));
    cosmeticlist.add(new Keyword("bullet", 4));
    cosmeticlist.add(new Keyword("代言", 3));
-   applelist.add(new Keyword("APPLE", -5));
-   applelist.add(new Keyword("MacBook", -5));
-   applelist.add(new Keyword("iMac", -5));
-   applelist.add(new Keyword("電子產品", -5));
-   applelist.add(new Keyword("電腦", -5));
-   applelist.add(new Keyword("周邊", -2));
-   applelist.add(new Keyword("作業系統", -4));
-   applelist.add(new Keyword("手機", -3));
-   applelist.add(new Keyword("平板", -5));
-   applelist.add(new Keyword("BTS", -4));
-   applelist.add(new Keyword("二手", -2));
+   cosmeticlist.add(new Keyword("APPLE", -5));
+   cosmeticlist.add(new Keyword("MacBook", -5));
+   cosmeticlist.add(new Keyword("iMac", -5));
+   cosmeticlist.add(new Keyword("電子產品", -5));
+   cosmeticlist.add(new Keyword("電腦", -5));
+   cosmeticlist.add(new Keyword("周邊", -2));
+   cosmeticlist.add(new Keyword("作業系統", -4));
+   cosmeticlist.add(new Keyword("手機", -3));
+   cosmeticlist.add(new Keyword("平板", -5));
+   cosmeticlist.add(new Keyword("BTS", -4));
+   cosmeticlist.add(new Keyword("二手", -2));
    
    
    

@@ -42,6 +42,9 @@ public class CallGoogle {
   return keyword;
  }
  public void setKeyword(String keyword) {
+	 if(keyword!=null && keyword.contains(" ")) {
+		 keyword=keyword.replace(" ", "");
+	 }
   this.keyword = keyword;
  }
  
@@ -69,7 +72,7 @@ public class CallGoogle {
  }
  
  public void constructor() {
-  this.url = "http://www.google.com/search?q="+keyword+"&oe=utf8&num=80";
+  this.url = "http://www.google.com/search?q="+keyword+"&oe=utf8&num=30";
   System.out.println(url);
   this.URList = new ArrayList<WebPage>();
   tree = new WebTree(new WebPage(url,"root"));

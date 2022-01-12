@@ -143,6 +143,11 @@ h1{
 }
 
 
+.cat{
+	position:absolute;
+	left:100px;
+}
+
 /* 搜尋結果CSS */
 
 .ui-widget{
@@ -171,19 +176,21 @@ h1{
 }
 p{
 	position:absolute;
-	top: 400px;
-	left: 630px;
+	top: 380px;
+	left: 600px;
 	font-size:30px;
 	font-style: Impact;
 	color: #1d075c;
 }
 
-a{
+a:href{
 	font-size:20px;
 	text-decoration: none;
+	text-align: center;
 }
 a:hover{
 	text-decoration:underline;
+	align: center;
 }
 
 @keyframes blink {
@@ -231,16 +238,20 @@ a:hover{
  function preventDefault(){
 	 //event.stopPropagation();
 	 //event.preventDefault();
+	 //document.getElementById("hide").style.visibility="hidden";
 	 var1 = document.all.data.value; //獲取頁面form中的變數值   
 	 var1 =var1+"cosmetic";   
+	 
 	 //document.insertForm.submit; 
 	 
 	}
 	function preventDefault2(){
 	 //event.stopPropagation();
 	 //event.preventDefault();
+	 document.getElementById("hide").style.visibility="visible";
 	 var1 = document.all.data.value; //獲取頁面form中的變數值   
 	 var1 = var1+"apple";   
+	 
 	 //document.insertForm.submit; 
 	}
 
@@ -262,11 +273,11 @@ a:hover{
                 <img class="searchicon" src="images/icons8-cat-64.png"/>
             </button>
 
-        <button id="cosmetic" type="submit" name="cosmetic" value="cosmetic" >
+        <button id="cosmetic"  name="cosmetic" value="cosmetic" >
             <img class="cos" src="images/icons8-cosmetic-64 (1).png"/>
         </button>
         
-        <button id="apple" type="submit" name="apple" value="apple">
+        <button id="apple" name="apple" value="apple">
             <img class="apple" src="images/icons8-apple-logo-30.png"/>
         </button>
         <input type = "hidden" name="data" >
@@ -306,15 +317,18 @@ a:hover{
                                         front.run();
                                         console = front.getTree().getConsole();
                                         for(int i=0;i<console.size();i++){
-                                         out.print("<br>");
+                                         out.print("<br>☆－－－－－－－－－－－－－－－－－－－－－－－－－－－－－☆<br>");
                                          %>
-                                         <a href='<%=console.get(i).webPage.url%>'> <%=console.get(i).webPage.name%> </a> 
+                                         <a href='<%=console.get(i).webPage.url%>'> <%=console.get(i).webPage.name%> </a>
+                                          
                               <%                        
                                         }
                                         }
                
-                    %>
-                    </div>
+                    %> 
+                    
+              <div><img class="cat" src="images/cat.gif"/></div>
+                    
 </form>
 </body>
 </html>

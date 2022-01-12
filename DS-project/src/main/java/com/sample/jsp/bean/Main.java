@@ -10,7 +10,7 @@ public class Main {
     
  CallGoogle google = new CallGoogle();
     google.setKeyword("cosmetic");
-    google.getKeylist().setSelectlist("mac");
+    google.getKeylist().setSelectlist("cosmetic");
     google.run();
     
  }

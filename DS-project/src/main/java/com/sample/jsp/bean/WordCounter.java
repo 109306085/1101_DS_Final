@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -23,7 +24,8 @@ public class WordCounter {
    URLConnection conn = u.openConnection();
 
    conn.setRequestProperty("User-agent", "Chrome/7.0.517.44");
-
+   conn.setReadTimeout(10000);
+   conn.setConnectTimeout(10000);
    InputStream in = conn.getInputStream();
 
    InputStreamReader inReader = new InputStreamReader(in,"utf-8");
@@ -37,7 +39,7 @@ public class WordCounter {
 
    }
   } catch (IOException e) {
-   
+   e.printStackTrace();
   }
      
   return retVal;
