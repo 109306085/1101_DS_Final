@@ -57,7 +57,7 @@ public class CallGoogle {
  }
 
  public void run() throws IOException{
-	 
+  long startTime=System.currentTimeMillis(); 
   keylist.setapplelist();
   keylist.setcosmeticlist();
   constructor();
@@ -67,12 +67,12 @@ public class CallGoogle {
   }catch (IOException e) {
    //e.printStackTrace();
   }
-  
-  
+  long endTime=System.currentTimeMillis(); 
+  System.out.println("°õ¦æ®É¶¡:"+(endTime-startTime)/1000+" second");
  }
  
  public void constructor() {
-	  this.url = "http://www.google.com/search?q=apple"+keyword+"&oe=utf8&num=50";
+	  this.url = "http://www.google.com/search?q=MAC"+keyword+"&oe=utf8&num=50";
 	  if(getKeylist().getSelectlist().get(0).name.equals("M.A.C")) {
 	   this.url = "http://www.google.com/search?q=M.A.C"+keyword+"&oe=utf8&num=50"; 
 	  }

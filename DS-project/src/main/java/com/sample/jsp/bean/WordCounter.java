@@ -39,7 +39,7 @@ public class WordCounter {
 
    }
   } catch (IOException e) {
-   e.printStackTrace();
+   //e.printStackTrace();
   }
      
   return retVal;

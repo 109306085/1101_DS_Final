@@ -43,25 +43,34 @@ public class WebTree {
  private void setPostOrderScoreThread(WebNode startNode, ArrayList<Keyword> keywords) throws IOException, InterruptedException{
   ArrayList<WebNode> A = new ArrayList<WebNode>();
   ArrayList<WebNode> B = new ArrayList<WebNode>();
+  ArrayList<WebNode> C = new ArrayList<WebNode>();
   
   for(int i=0;i<startNode.getChildren().size();i++) {
-   if(i<startNode.getChildren().size()/2) {
+   if(i<=startNode.getChildren().size()/3) {
     A.add(startNode.getChildren().get(i));
    }
-   else {
-    B.add(startNode.getChildren().get(i));
+   else if(i>startNode.getChildren().size()/3&i<=startNode.getChildren().size()*2/3){
+	    B.add(startNode.getChildren().get(i));
+	   }
+   else if(i>startNode.getChildren().size()*2/3){
+    C.add(startNode.getChildren().get(i));
    }  
   }
   WebNode nodeA = new WebNode(A,keywords);
   WebNode nodeB = new WebNode(B,keywords);
+  WebNode nodeC = new WebNode(C,keywords);
   Thread threadA = new Thread(nodeA);
   Thread threadB = new Thread(nodeB);
+  Thread threadC = new Thread(nodeC);
   threadA.start();
   threadB.start();
+  threadC.start();
   threadA.join();
   threadB.join();
+  threadC.join();
   console.addAll(nodeA.getChildren());
   console.addAll(nodeB.getChildren());
+  console.addAll(nodeC.getChildren());
   }
  
  public void eularPrintTree(){

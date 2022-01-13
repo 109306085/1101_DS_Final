@@ -9,8 +9,8 @@ public class Main {
   // TODO Auto-generated method stub
     
  CallGoogle google = new CallGoogle();
-    google.setKeyword("cosmetic");
-    google.getKeylist().setSelectlist("cosmetic");
+    google.setKeyword("NCCU");
+    google.getKeylist().setSelectlist("apple");
     google.run();
     
  }
